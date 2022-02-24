@@ -1,0 +1,69 @@
+!{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+   
+
+    {% for x in cat %}
+   <a  href="{% url 'subcategory' x.id %}">{{x.name}}</a>   <br> 
+
+    {% endfor %}
+
+    {% for x in con %}
+    <a  href="{% url 'subconcern' x.id %}">{{x.name}}</a>   <br>
+ 
+     {% endfor %}
+
+     {% for x in type %}
+     <a  href="{% url 'subtype' x.id %}">{{x.name}}</a>   <br>
+  
+      {% endfor %}
+
+      {% for x in ignre %}
+      <a  href="{% url 'subingrediant' x.id %}">{{x.name}}</a>   <br>
+   
+       {% endfor %}
+
+       {% for x in brand %}
+       <a  href="{% url 'subbrand' x.id %}">{{x.name}}</a>   <br>
+    
+        {% endfor %}
+
+
+    
+  
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

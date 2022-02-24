@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+
+
+<form method="POST" novalidate>
+    {% csrf_token %}
+    {% for error in form.non_field_errors %}
+    {{ error }}
+    {% endfor %}
+    {% for f in form %}
+    <div>{{f.label_tag}}{{f}}</div>
+    <input type="submit" value="submit">
+    {% endfor %}
+      
+</form>
+{% for o in order %}
+<a href="{% url 'customer_dashboard' %}">edit shipping address</a><br>
+<a href="{% url 'choose_payment' %}">edit payment type</a><br>
+<a href="{% url 'payment' %}">Place your order and pay</a><br>
+
+product name={{o.product_id.name}}<br>
+product price={{o.product_id.price}}<br>
+quantiry{{o.product_id.quantity}}<br>
+
+
+
+
+{% endfor %}
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

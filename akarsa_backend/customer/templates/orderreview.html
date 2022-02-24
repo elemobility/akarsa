@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <a href="{% url 'customer_dashboard'  %}">edit shipping address</a>
+
+<h1>review your order</h1>
+{% for o in order %}
+
+product name={{o.product_id.name}}<br>
+product price={{o.product_id.price}}<br>
+quantiry{{o.product_id.quantity}}<br>
+
+
+
+
+{% endfor %}
+{% for o in order %}
+
+product name={{o.product_id.name}}<br>
+product price={{o.product_id.price}}<br>
+quantiry{{o.product_id.quantity}}<br>
+
+
+
+
+{% endfor %}
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

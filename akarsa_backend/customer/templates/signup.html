@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+
+<h1>signup</h1>
+<form method="POST" novalidate>
+    {% csrf_token %}
+    {% for error in form.non_field_errors %}
+    {{ error }}
+    {% endfor %}
+    {% for f in form %}
+    <div>{{f.label_tag}}{{f}}</div>
+
+    {% endfor %}
+      <input type="submit" value="submit">
+</form>
+        </div>
+    </div>
+</div>
+
+
+
+
+<a href="{% url 'customer_login' %}">login</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

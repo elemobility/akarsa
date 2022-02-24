@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+
+<h1>dashboard</h1>
+Welcome {{user}}
+<form method="POST" novalidate>
+    {% csrf_token %}
+    {% for error in form.non_field_errors %}
+    {{ error }}
+    {% endfor %}
+    {% for f in form %}
+    <div>{{f.label_tag}}{{f}}</div>
+      
+    {% endfor %}
+    <input type="submit" value="shipping address">
+      
+</form>
+<h1>your order</h1>
+{% for o in order %}
+<table border="1">
+    <tr>
+        <td>product name</td>
+        <td>price</td>
+        <td>quantity</td>
+        <td>description</td>
+        <td>order date</td>
+        <td>status</td>
+
+    </tr>
+    <tr>
+    <td>
+        {{o.product_id.name}} </td>
+       <td> {{o.product_id.price}}</td>
+       <td> {{o.product_id.quantity}}</td>
+       <td> {{o.product_id.description}}</td>
+       <td> {{o.date_created}}</td>
+       <td> {{o.status}}</td>
+       
+        </tr>
+
+</table>
+{%  endfor %}
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1><a href="{% url 'logout' %}"> logout</a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

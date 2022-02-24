@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+
+choose your payment method
+
+
+
+<input type="radio" name="pa" value="net banking"><label for="html">Net Banking</label>
+<input type="radio" name="pa" value="net banking"><label for="html">Credit card</label>
+<input type="radio" name="pa" value="net banking"><label for="html">Debit card</label>
+<input type="radio" name="pa" value="net banking"><label for="html"></label>Paytm
+
+
+
+
+
+   
+   <a href="{% url 'order_review'  %}">review</a>
+    
+   
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

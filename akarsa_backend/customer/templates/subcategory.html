@@ -1,0 +1,131 @@
+!{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+    {% for c in subcategory %}
+    
+    <a href="{% url 'sub_cattegory_product' c.id %}">{{c.name}}</a><br>
+    
+    {% endfor %}
+
+    {% for c in subconcern %}
+    <a href="{% url 'sub_concern_product' c.id %}">{{c.name}}</a><br>
+    
+    {% endfor %}
+
+    {% for c in subtype %}
+    <a href="{% url 'sub_type_product' c.id %}">{{c.name}}</a><br>
+    
+    {% endfor %}
+
+    {% for c in subingrediant %}
+    <a href="{% url 'sub_ingrediant_product' c.id %}">{{c.name}}</a><br>
+    
+    {% endfor %}
+
+    {% for c in subbrand %}
+    <a href="{% url 'sub_brand_product' c.id %}">{{c.name}}</a><br>
+    
+    {% endfor %}
+
+
+
+    {% for c in subcategory_pro %}
+    <a href="{% url 'product_desc' c.id %}">{{c.name}}</a><br>
+    
+    {% endfor %}
+
+    {% for c in subbrand_pro %}
+    <a href="{% url 'product_desc' c.id %}">{{c.name}}</a><br>
+    
+    {% endfor %}
+
+    {% for c in subconcern_pro %}
+    <a href="{% url 'product_desc' c.id %}">{{c.name}}</a><br>
+    <form action="",method="POST">
+
+        
+
+
+
+
+    </form>
+    
+    {% endfor %}
+
+    {% for c in subingrediant_pro %}
+    <a href="{% url 'product_desc' c.id %}">{{c.name}}</a><br>
+    
+    {% endfor %}
+    {% for c in subtype_pro %}
+    <a href="{% url 'product_desc' c.id %}">{{c.name}}</a><br>
+    
+    {% endfor %}
+
+  
+    
+    {% for c in desc %}
+    <pre><h1>Product name</h1>{{c.name}}
+        <h1>Product id</h1>{{c.id}}
+        <h1>Productimage</h1><img src="c.image1.url">
+       <h1>Price</h1> {{c.price}}
+       <h1>Description</h1>{{c.description}}
+       <a href="{% url 'add_to_cart' c.id">add to cart</a>
+        
+        <a href="{% url 'buy_product' c.id %}">buy</a> 
+    </pre>
+    
+    
+ 
+    {% endfor %}
+
+    {% for c in items_in %}
+    <pre>product id-{{c.id}}  
+    </pre
+   
+    {% endfor %}
+    
+
+  
+    
+
+
+  
+
+    
+    
+    
+
+ 
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
